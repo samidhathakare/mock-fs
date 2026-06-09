@@ -12,7 +12,7 @@ public class FileNode implements FileSystemNode {
         this.size = size;
     }
     @Override
-    public String getNae() {return name;}
+    public String getName() {return name;}
 
     //BASE CASE: a file's total size is just itself 
     @Override

@@ -1,7 +1,7 @@
 package com.filesystem;
 
-import java.util.ArrayList;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
@@ -25,7 +25,7 @@ public class FileSystem {
                 if (history.isEmpty())
                     return "Alredy at root. Cannot go up.";
                 currentDir = history.pop();
-                return "Now at: " + getCurrentpath();
+                return "Now at: " + getCurrentPath();
             default:
                 FileSystemNode found = currentDir.findChild(target);
                 if (found ==null)
@@ -33,8 +33,8 @@ public class FileSystem {
                 if(!found.isDirectory())
                    return "cd: not a directory: " +target;
                 history.push (currentDir);
-                currentDir = (Directorynode) found;
-                return "Now at:" + getCurrentpath();
+                currentDir = (DirectoryNode) found;
+                return "Now at:" + getCurrentPath();
         }
     }
         //ls

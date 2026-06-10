@@ -29,7 +29,7 @@ public abstract class DirectoryNode implements FileSystemNode {
     @Override 
     public boolean isDirectory() { return true;}
 
-    public void addchild(FileSystemNode node) {
+    public void addChild(FileSystemNode node) {
         if (node == null) throw new IllegalArgumentException("Cannot add null");
         children.add(node);
     }

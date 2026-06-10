@@ -22,32 +22,23 @@ public class Main {
             String arg     = parts.length > 1 ? parts[1] : "";
  
             switch (command) {
-                case "cd":
+                case "cd" -> {
                     if (arg.isEmpty())
                         System.out.println("Usage: cd <dir>  |  cd ..  |  cd /");
                     else
                         System.out.println(fs.cd(arg));
-                    break;
-                case "ls":
-                    System.out.println(fs.ls());
-                    break;
-                case "size":
-                    System.out.println(fs.size());
-                    break;
-                case "pwd":
-                    System.out.println(fs.getCurrentPath());
-                    break;
-                case "help":
-                    printHelp();
-                    break;
-                case "exit":
-                case "quit":
+                }
+                case "ls" -> System.out.println(fs.ls());
+                case "size" -> System.out.println(fs.size());
+                case "pwd" -> System.out.println(fs.getCurrentPath());
+                case "help" -> printHelp();
+                case "exit", "quit" -> {
                     System.out.println("Goodbye!");
                     scanner.close();
                     return;
-                default:
-                    System.out.println("Unknown command: '" + command
-                            + "'. Type 'help' for available commands.");
+                }
+                default -> System.out.println("Unknown command: '" + command
+                        + "'. Type 'help' for available commands.");
             }
             System.out.println();
         }

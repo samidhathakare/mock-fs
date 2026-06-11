@@ -24,7 +24,8 @@ class FileSystemTest {
         assertFalse(new FileNode("t.txt", 100).isDirectory());
     }
     @Test void fileNode_rejectsNegativeSize() {
-        assertThrows(IllegalArgumentException.class, () -> new FileNode("t.txt", -1));
+        IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () -> new FileNode("t.txt", -1));
+        assertEquals(IllegalArgumentException.class, ex.getClass());
     }
  
     // ── DirectoryNode ─────────────────────────────────────────────

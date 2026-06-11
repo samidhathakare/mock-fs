@@ -4,7 +4,7 @@ A small Java CLI that lets you navigate a virtual file system and check director
 
 ## What it does
 
-You get a shell-like prompt where you can move around a pre-built directory tree and inspect sizes. Nothing is read from your actual disk — the tree is hardcoded in `SeedData.java`.
+Simulates a file system, that can be traversed and queried for size and list directorires. Nothing is read from your actual disk - the tree is hardcoded in `SeedData.java`.
 
 ## Commands
 

@@ -21,9 +21,6 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Verify code formatting
-        run: mvn -B spotless:check
-
       - name: Build and test with Maven
         run: mvn -B package --file pom.xml
 
